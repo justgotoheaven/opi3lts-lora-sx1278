@@ -7,7 +7,7 @@ import time
 # Begin LoRa radio with connected SPI bus and IO pins (cs and reset) on GPIO
 # SPI is defined by bus ID and cs ID and IO pins defined by chip and offset number
 spi = LoRaSpi(1, 0)
-cs = LoRaGpio(1, 15)
+cs = LoRaGpio(1, 24)
 reset = LoRaGpio(1, 18)
 LoRa = SX127x(spi, cs, reset)
 print("Begin LoRa radio")
@@ -36,7 +36,7 @@ print("Set packet parameters:\n\tExplicit header type\n\tPreamble length = 12\n\
 LoRa.setHeaderType(LoRa.HEADER_EXPLICIT)                        # Explicit header mode
 LoRa.setPreambleLength(12)                                      # Set preamble length to 12
 LoRa.setPayloadLength(15)                                       # Initialize payloadLength to 15
-LoRa.setCrcEnable(True)                                         # Set CRC enable
+# LoRa.setCrcEnable(True)                                         # Set CRC enable
 
 # Set syncronize word for public network (0x34)
 print("Set syncronize word to 0x34")
