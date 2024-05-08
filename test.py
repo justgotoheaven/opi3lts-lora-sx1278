@@ -40,7 +40,7 @@ LoRa.setPayloadLength(15)                                       # Initialize pay
 
 # Set syncronize word for public network (0x34)
 print("Set syncronize word to 0x34")
-# LoRa.setSyncWord(0x34)
+LoRa.setSyncWord(0x12)
 
 print("\n-- LoRa Transmitter --\n")
 
